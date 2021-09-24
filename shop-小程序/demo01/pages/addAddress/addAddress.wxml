@@ -1,0 +1,13 @@
+<!--pages/addAddress/addAddress.wxml-->
+<view class="page-body">
+  <view class="page-section-first">
+    <input id="name" type="number" placeholder="收件人姓名" placeholder-class="placeholder" class="inputs" bindinput="nameInput"/>
+  </view>
+  <view class="page-section-second">
+    <input id="psw1"  placeholder="手机号码" placeholder-class="placeholder" class="inputs" bindinput="phoneInput"/>
+  </view>
+  <view class="page-section-second">
+    <input id="psw2"  placeholder="收货地址" placeholder-class="placeholder" class="inputs" bindinput="addressInput"/>
+  </view>
+  <button id="but" class="button-click"  bindtap="addCheck">新增地址</button>
+</view>

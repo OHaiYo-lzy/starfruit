@@ -1,0 +1,13 @@
+<!--pages/login/login.wxml-->
+<view class="page-body">
+  <view class="page-section-first">
+    <input id="name" type="number" placeholder="用户名" placeholder-class="placeholder" class="inputs" bindinput="usernameInput"/>
+  </view>
+  <view class="page-section-second">
+    <input id="psw" password type="text" placeholder="密码" placeholder-class="placeholder" class="inputs" bindinput="passwordInput"/>
+  </view>
+  <button id="but" class="button-click"  bindtap="loginCheck">登录</button>
+  <view class="forgotPassword" bindtap="forgot">
+    <text class="forgotPassword-text">忘记密码？</text>
+  </view>
+</view>

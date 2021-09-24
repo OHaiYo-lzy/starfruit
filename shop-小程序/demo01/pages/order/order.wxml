@@ -1,0 +1,74 @@
+<!--pages/order/order.wxml-->
+<view class='ticket-container'>
+  <scroll-view scroll-y bindscrolltoupper="upper" bindscrolltolower="lower" bindscroll="scroll"
+    scroll-into-view="{{toView}}" scroll-top="{{scrollTop}}">
+    <!--Tab布局-->
+    <view class='title'>
+      <view class="{{0 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='0'>
+        <text>待付款</text>
+        <hr class="line-style" />
+      </view>
+      <view class="{{1 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='1'>
+        <text>待收货</text>
+        <hr class="line-style" />
+      </view>
+      <view class="{{2 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='2'>
+        <text>已完成</text>
+        <hr class="line-style" />
+      </view>
+      <view class="{{3 == currentIndex ? 'title-sel-selected' : 'title-sel'}}" bindtap='titleClick' data-idx='3'>
+        <text>已取消</text>
+        <hr class="line-style" />
+      </view>
+
+    </view>
+
+    <!--内容布局-->
+    <swiper class='swiper' bindchange='pagechange' current='{{currentIndex}}'>
+
+      <swiper-item class='swiper'>
+        <scroll-view class="scbg" scroll-y="true">
+          <view wx:for="{{payList}}" wx:for-item="item" class='box'>
+            <view class="border">
+              <view class='name'>
+                <view class="goodsName">
+                  <text>{{item.name}}</text>
+                  <image class="trashbin" src="/images/trashbin.png"></image>
+                </view>
+              </view>
+              <view class="about">
+                <image class="image" src="{{item.image}}"></image>
+                <view class="leftBlock">
+                  <view class="detail">
+                    <view class="description">{{item.description}}</view>
+                    <view class="price">{{item.price}}</view>
+                  </view>
+                  <view class="button"></view>
+                </view>
+              </view>
+            </view>
+          </view>
+        </scroll-view>
+      </swiper-item>
+
+
+
+      <swiper-item class='swiper' class='swiper'>
+        <view wx:for="{{secondList}}" wx:for-item="item" class='record-item'>
+          <view class='name'>
+            <span>名称：{{item.name}}</span>
+            <span>面额：{{item.money}}</span>
+          </view>
+        </view>
+      </swiper-item>
+      <swiper-item class='swiper' class='swiper'>
+        <view wx:for="{{thirdList}}" wx:for-item="item" class='record-item'>
+          <view class='name'>
+            <span>名称：{{item.name}}</span>
+            <span>面额：{{item.money}}</span>
+          </view>
+        </view>
+      </swiper-item>
+    </swiper>
+  </scroll-view>
+</view>

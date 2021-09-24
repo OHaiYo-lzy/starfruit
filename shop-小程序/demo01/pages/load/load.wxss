@@ -1,0 +1,43 @@
+/* pages/load/load.wxss */
+.userinfo{
+  align-content: center;
+}
+
+.but{
+  background-color: #04be01;
+  color: white;
+  font-weight:normal;
+}
+
+.upgrade{
+  color: #000000;
+  width: 80%;
+  font-size: 40rpx;
+  font-weight:normal;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.separator{
+  color: #8a8a8a;
+  width: 80%;
+  font-size: 40rpx;
+  font-weight:normal;
+  text-align: center;
+  margin-top: 20rpx;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.txt{
+  width: 80%;
+  color: #8a8a8a;
+  font-size: 32rpx;
+  font-weight: 10rpx;
+  margin-top: 10rpx;
+  margin-left: 10%;
+  margin-right: 10%;
+  margin: auto;
+}
